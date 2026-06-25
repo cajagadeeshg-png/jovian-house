@@ -1,46 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jovian House</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      text-align: center;
-      background: #0A2342;
-      color: white;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jovian House | Fashion Beyond Gravity</title>
 
-    .hero {
-      padding: 100px 20px;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-    h1 {
-      font-size: 60px;
-      margin-bottom: 10px;
-    }
+body{
+background:#f8f8f8;
+color:#333;
+}
 
-    p {
-      font-size: 24px;
-    }
+header{
+background:#081b33;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .btn {
-      background: gold;
-      color: black;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-  </style>
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#d4af37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero-content h1{
+font-size:64px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:24px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#d4af37;
+color:black;
+padding:15px 30px;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+color:#081b33;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+}
+
+.card p{
+padding:0 15px 20px;
+}
+
+.about{
+background:white;
+text-align:center;
+line-height:1.8;
+}
+
+footer{
+background:#081b33;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+nav{
+display:none;
+}
+
+}
+</style>
 </head>
+
 <body>
 
-<div class="hero">
-  <h1>JOVIAN HOUSE</h1>
-  <p>Fashion Beyond Gravity</p>
-  <a class="btn" href="#">Explore Collection</a>
+<header>
+<div class="logo">JOVIAN HOUSE</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Women</a>
+<a href="#">Men</a>
+<a href="#">Collections</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Fashion Beyond Gravity</h1>
+<p>Premium styles inspired by confidence and elegance.</p>
+<a href="#" class="btn">Shop Collection</a>
 </div>
+</section>
+
+<section class="section">
+<h2>Trending Collections</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800">
+<h3>Women's Collection</h3>
+<p>Modern and elegant outfits for every occasion.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800">
+<h3>Party Wear</h3>
+<p>Premium dresses crafted to stand out.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800">
+<h3>Men's Collection</h3>
+<p>Contemporary fashion for modern gentlemen.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section about">
+<h2>About Jovian House</h2>
+
+<p>
+Inspired by Jupiter, the planet of greatness and expansion,
+Jovian House brings premium fashion that combines style,
+comfort and confidence.
+</p>
+
+</section>
+
+<section class="section">
+<h2>Contact Us</h2>
+
+<p style="text-align:center;">
+Email: contact@jovianhouse.com
+<br><br>
+Instagram: @jovianhouse
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 Jovian House. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
