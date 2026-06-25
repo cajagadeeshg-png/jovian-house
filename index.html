@@ -4,171 +4,119 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jovian House | Fashion Beyond Gravity</title>
-<meta name="description" content="Jovian House - Fashion Beyond Gravity. Essentials, Linen, and Signature fashion collections for Men and Women.">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Cormorant Garamond',serif;}
-body{background:#f7f5f0;color:#333;}
-header{background:linear-gradient(90deg,#0f0f0f,#151515,#241b08);padding:12px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-.logo img{height:65px;}
-nav a{color:white;text-decoration:none;margin-left:25px;font-size:18px;transition:0.3s;}
-nav a:hover{color:#d4af37;}
-.menu-toggle{display:none;font-size:28px;color:#d4af37;cursor:pointer;}
-.section{padding:60px 6%;}
-.section h2{text-align:center;font-size:42px;margin-bottom:15px;color:#d4af37;font-family:'Cinzel',serif;}
-.section-subtitle{text-align:center;margin-bottom:40px;font-size:18px;color:#666;}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.08);transition:0.3s;}
-.card:hover{transform:translateY(-5px);}
-.card img{width:100%;height:280px;object-fit:cover;}
-.card-content{padding:20px;text-align:center;}
-.card-content h3{margin-bottom:10px;font-family:'Playfair Display',serif;}
-.price{font-size:20px;font-weight:bold;color:#d4af37;margin-bottom:15px;}
-select{padding:6px;margin:5px;}
-.btn{display:inline-block;padding:10px 20px;background:#d4af37;color:black;text-decoration:none;font-weight:bold;border-radius:6px;transition:0.3s;}
-.btn:hover{transform:translateY(-2px);}
-footer{background:#0f0f0f;color:#d4af37;text-align:center;padding:30px;margin-top:40px;}
-@media(max-width:768px){nav{display:none;flex-direction:column;background:#0f0f0f;position:absolute;top:70px;right:0;width:200px;padding:20px;}nav.active{display:flex;}.menu-toggle{display:block;}.logo img{height:55px;}.section h2{font-size:32px;}}
+body { font-family: 'Cormorant Garamond', serif; background:#f7f5f0; margin:0; }
+.section { padding:40px; text-align:center; }
+.grid { display:flex; justify-content:center; gap:30px; }
+.grid img { width:300px; height:400px; object-fit:cover; cursor:pointer; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.1); transition:0.3s; }
+.grid img:hover { transform:scale(1.05); }
+.hidden { display:none; }
+.products { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin-top:30px; }
+.card { background:white; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.08); overflow:hidden; }
+.card img { width:100%; height:280px; object-fit:cover; }
+.card-content { padding:20px; text-align:center; }
+.btn { display:inline-block; padding:10px 20px; background:#d4af37; color:black; text-decoration:none; font-weight:bold; border-radius:6px; margin-top:10px; }
 </style>
 </head>
 <body>
 
-<header>
-<div class="logo"><img src="JH.png" alt="Jovian House Logo"></div>
-<div class="menu-toggle">☰</div>
-<nav>
-<a href="#essentials">Essentials</a>
-<a href="#linen">Linen</a>
-<a href="#signature">Signature</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-<!-- ESSENTIALS -->
-<section class="section" id="essentials">
-<h2>JOVIAN ESSENTIALS</h2>
-<div class="section-subtitle">Everyday Fashion For Every Journey</div>
-
-<h3>Men</h3>
-<div class="products">
-<!-- Example Product -->
-<div class="card">
-<img id="ess-men-1" src="fabric-black.jpg" alt="Premium Cotton T-Shirt - Black">
-<div class="card-content">
-<h3>Premium Cotton T-Shirt</h3>
-<p class="price">₹999</p>
-<label>Size:</label>
-<select>
-<option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
-</select>
-<label>Colour:</label>
-<select onchange="changeColor('ess-men-1', this.value)">
-<option value="fabric-black.jpg">Black</option>
-<option value="fabric-white.jpg">White</option>
-<option value="fabric-navy.jpg">Navy</option>
-<option value="fabric-grey.jpg">Grey</option>
-<option value="fabric-olive.jpg">Olive</option>
-<option value="fabric-beige.jpg">Beige</option>
-<option value="fabric-pink.jpg">Pastel Pink</option>
-<option value="fabric-skyblue.jpg">Sky Blue</option>
-</select>
-<a href="https://wa.me/919999999999" class="btn">Order</a>
-</div>
-</div>
-<!-- Repeat 9 more Men products -->
-</div>
-
-<h3>Women</h3>
-<div class="products">
-<div class="card">
-<img id="ess-women-1" src="fabric-white.jpg" alt="Casual Maxi Dress - White">
-<div class="card-content">
-<h3>Casual Maxi Dress</h3>
-<p class="price">₹1,499</p>
-<label>Size:</label>
-<select>
-<option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<label>Colour:</label>
-<select onchange="changeColor('ess-women-1', this.value)">
-<option value="fabric-white.jpg">White</option>
-<option value="fabric-beige.jpg">Beige</option>
-<option value="fabric-pink.jpg">Pastel Pink</option>
-<option value="fabric-blue.jpg">Blue</option>
-<option value="fabric-black.jpg">Black</option>
-<option value="fabric-skyblue.jpg">Sky Blue</option>
-</select>
-<a href="https://wa.me/919999999999" class="btn">Order</a>
-</div>
-</div>
-<!-- Repeat 9 more Women products -->
-</div>
+<!-- Step 1: Face of the site -->
+<section class="section" id="homepage">
+  <h2>Explore Jovian Collections</h2>
+  <div class="grid">
+    <img src="essentials.jpg" alt="Essentials" onclick="selectBucket('essentials')">
+    <img src="linen.jpg" alt="Linen" onclick="selectBucket('linen')">
+    <img src="signature.jpg" alt="Signature" onclick="selectBucket('signature')">
+  </div>
 </section>
 
-<!-- LINEN -->
-<section class="section" id="linen">
-<h2>JOVIAN LINEN</h2>
-<div class="section-subtitle">Crafted From Nature, Designed For Comfort</div>
-
-<h3>Men</h3>
-<div class="products">
-<div class="card">
-<img id="linen-men-1" src="fabric-white.jpg" alt="Premium Linen Shirt - White">
-<div class="card-content">
-<h3>Premium Linen Shirt</h3>
-<p class="price">₹1,799</p>
-<label>Size:</label>
-<select>
-<option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
-</select>
-<label>Colour:</label>
-<select onchange="changeColor('linen-men-1', this.value)">
-<option value="fabric-white.jpg">White</option>
-<option value="fabric-beige.jpg">Beige</option>
-<option value="fabric-sand.jpg">Sand</option>
-<option value="fabric-green.jpg">Sage Green</option>
-<option value="fabric-skyblue.jpg">Sky Blue</option>
-<option value="fabric-charcoal.jpg">Charcoal</option>
-<option value="fabric-yellow.jpg">Pastel Yellow</option>
-</select>
-<a href="https://wa.me/919999999999" class="btn">Order</a>
-</div>
-</div>
-<!-- Repeat 9 more Men products -->
-</div>
-
-<h3>Women</h3>
-<div class="products">
-<div class="card">
-<img id="linen-women-1" src="fabric-beige.jpg" alt="Linen Wrap Dress - Beige">
-<div class="card-content">
-<h3>Linen Wrap Dress</h3>
-<p class="price">₹2,499</p>
-<label>Size:</label>
-<select>
-<option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
-</select>
-<label>Colour:</label>
-<select onchange="changeColor('linen-women-1', this.value)">
-<option value="fabric-white.jpg">White</option>
-<option value="fabric-beige.jpg">Beige</option>
-<option value="fabric-sand.jpg">Sand</option>
-<option value="fabric-green.jpg">Sage Green</option>
-<option value="fabric-skyblue.jpg">Sky Blue</option>
-<option value="fabric-charcoal.jpg">Charcoal</option>
-<option value="fabric-yellow.jpg">Pastel Yellow</option>
-</select>
-<a href="https://wa.me/919999999999" class="btn">Order</a>
-</div>
-</div>
-<!-- Repeat 9 more Women products -->
-</div>
+<!-- Step 2: Gender Selection -->
+<section class="section hidden" id="gender">
+  <h2>Select Gender</h2>
+  <button class="btn" onclick="selectGender('men')">Men</button>
+  <button class="btn" onclick="selectGender('women')">Women</button>
 </section>
 
-<!-- SIGNATURE -->
-<section class="section" id="signature">
-<h2>JOVIAN SIGNATURE</h2>
-<div class="section
+<!-- Step 3: Product Hierarchy -->
+<section class="section hidden" id="products">
+  <h2 id="bucket-title"></h2>
+  <div class="products" id="product-list"></div>
+</section>
+
+<script>
+let currentBucket = '';
+let currentGender = '';
+
+function selectBucket(bucket) {
+  currentBucket = bucket;
+  document.getElementById('homepage').classList.add('hidden');
+  document.getElementById('gender').classList.remove('hidden');
+}
+
+function selectGender(gender) {
+  currentGender = gender;
+  document.getElementById('gender').classList.add('hidden');
+  document.getElementById('products').classList.remove('hidden');
+  document.getElementById('bucket-title').innerText = 
+    `Jovian ${capitalize(currentBucket)} - ${capitalize(currentGender)}`;
+  loadProducts();
+}
+
+function loadProducts() {
+  const productList = document.getElementById('product-list');
+  productList.innerHTML = '';
+  for (let i=1; i<=10; i++) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <img id="prod-${i}" src="fabric-black.jpg" alt="Product ${i}">
+      <div class="card-content">
+        <h3>${capitalize(currentBucket)} ${capitalize(currentGender)} Product ${i}</h3>
+        <p class="price">₹${999+i*100}</p>
+        <button class="btn" onclick="toggleOptions('options-${i}')">Choose Size & Colour</button>
+        <div id="options-${i}" class="hidden">
+          <label>Size:</label>
+          <select>
+            <option>XS</option><option>S</option><option>M</option>
+            <option>L</option><option>XL</option><option>XXL</option>
+          </select>
+          <label>Colour:</label>
+          <select onchange="changeColor('prod-${i}', this.value)">
+            <option value="fabric-black.jpg">Black</option>
+            <option value="fabric-white.jpg">White</option>
+            <option value="fabric-navy.jpg">Navy</option>
+            <option value="fabric-grey.jpg">Grey</option>
+            <option value="fabric-olive.jpg">Olive</option>
+            <option value="fabric-beige.jpg">Beige</option>
+            <option value="fabric-pink.jpg">Pastel Pink</option>
+            <option value="fabric-skyblue.jpg">Sky Blue</option>
+            <option value="fabric-green.jpg">Sage Green</option>
+            <option value="fabric-charcoal.jpg">Charcoal</option>
+            <option value="fabric-red.jpg">Red</option>
+            <option value="fabric-gold.jpg">Gold</option>
+            <option value="fabric-silver.jpg">Silver</option>
+          </select>
+          <br><br>
+          <a href="https://wa.me/919999999999" class="btn">Order</a>
+        </div>
+      </div>`;
+    productList.appendChild(card);
+  }
+}
+
+function toggleOptions(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('hidden');
+}
+
+function changeColor(imgId, newSrc) {
+  document.getElementById(imgId).src = newSrc;
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+</script>
+
+</body>
+</html>
